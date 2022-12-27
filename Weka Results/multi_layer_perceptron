@@ -1,0 +1,106 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.functions.MultilayerPerceptron -- -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     last_train-weka.filters.unsupervised.attribute.Remove-R10
+Instances:    6600
+Attributes:   9
+              height
+              weight
+              age
+              gender
+              bmiValues
+              bmiIndex
+              heartAttackRisk
+              heartRate
+              activityIndex
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+Linear Node 0
+    Inputs    Weights
+    Threshold    1.0937224644971637
+    Node 1    -0.6239923915721342
+    Node 2    -1.5604447803298396
+    Node 3    -1.0897266825459793
+    Node 4    0.5587474535601008
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -2.6600224888392248
+    Attrib height    -0.9119957162237647
+    Attrib weight    0.7958734608018646
+    Attrib age    -0.09057773662965427
+    Attrib gender    0.49265351514592826
+    Attrib bmiValues    -1.6355771199252926
+    Attrib bmiIndex    0.8660747076620349
+    Attrib heartAttackRisk    0.2851134650504985
+    Attrib heartRate    2.288197820276506
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -0.6522836205185312
+    Attrib height    -0.5011122248633322
+    Attrib weight    1.4709971677022098
+    Attrib age    -0.8171507162939916
+    Attrib gender    -0.556442447002684
+    Attrib bmiValues    -1.0217997287286629
+    Attrib bmiIndex    -3.593895798320315
+    Attrib heartAttackRisk    -1.3672847432107629
+    Attrib heartRate    14.589382990817034
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -4.796734236761834
+    Attrib height    1.9799580387086446
+    Attrib weight    -4.803138402329574
+    Attrib age    -0.6354687731631669
+    Attrib gender    0.07071258880584008
+    Attrib bmiValues    5.105425626000489
+    Attrib bmiIndex    -1.3213524447578586
+    Attrib heartAttackRisk    -1.0564231832009994
+    Attrib heartRate    2.1714186458526483
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -13.224867646718133
+    Attrib height    1.3550850944898454
+    Attrib weight    -3.0440102609201865
+    Attrib age    -1.6446715468729707
+    Attrib gender    -0.05428590498198487
+    Attrib bmiValues    2.2918240797289506
+    Attrib bmiIndex    -7.18672085251725
+    Attrib heartAttackRisk    -2.667582195596466
+    Attrib heartRate    34.46957512396004
+Class 
+    Input
+    Node 0
+
+Attribute mappings:
+
+Model attributes           	    Incoming attributes
+---------------------------	    ----------------
+(numeric) height           	--> 1 (numeric) height
+(numeric) weight           	--> 2 (numeric) weight
+(numeric) age              	--> 3 (numeric) age
+(numeric) gender           	--> 4 (numeric) gender
+(numeric) bmiValues        	--> 5 (numeric) bmiValues
+(numeric) bmiIndex         	--> 6 (numeric) bmiIndex
+(numeric) heartAttackRisk  	--> 7 (numeric) heartAttackRisk
+(numeric) heartRate        	--> 8 (numeric) heartRate
+(numeric) activityIndex    	--> 9 (numeric) activityIndex
+
+
+Time taken to build model: 2.63 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.01 seconds
+
+=== Summary ===
+
+Correlation coefficient                  0.8664
+Mean absolute error                      0.4706
+Root mean squared error                  0.6503
+Relative absolute error                 47.0589 %
+Root relative squared error             58.1624 %
+Total Number of Instances             3400     
+

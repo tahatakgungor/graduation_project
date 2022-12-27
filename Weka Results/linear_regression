@@ -1,0 +1,63 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.functions.LinearRegression -- -S 0 -R 1.0E-8 -num-decimal-places 4
+Relation:     last_train-weka.filters.unsupervised.attribute.Remove-R10
+Instances:    6600
+Attributes:   9
+              height
+              weight
+              age
+              gender
+              bmiValues
+              bmiIndex
+              heartAttackRisk
+              heartRate
+              activityIndex
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+
+Linear Regression Model
+
+activityIndex =
+
+     -0.0044 * height +
+      0.0065 * age +
+      0.1292 * gender +
+      0.3207 * bmiIndex +
+      0.4031 * heartAttackRisk +
+     -0.0336 * heartRate +
+      6.2341
+Attribute mappings:
+
+Model attributes           	    Incoming attributes
+---------------------------	    ----------------
+(numeric) height           	--> 1 (numeric) height
+(numeric) weight           	--> 2 (numeric) weight
+(numeric) age              	--> 3 (numeric) age
+(numeric) gender           	--> 4 (numeric) gender
+(numeric) bmiValues        	--> 5 (numeric) bmiValues
+(numeric) bmiIndex         	--> 6 (numeric) bmiIndex
+(numeric) heartAttackRisk  	--> 7 (numeric) heartAttackRisk
+(numeric) heartRate        	--> 8 (numeric) heartRate
+(numeric) activityIndex    	--> 9 (numeric) activityIndex
+
+
+Time taken to build model: 0.08 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.01 seconds
+
+=== Summary ===
+
+Correlation coefficient                  0.7579
+Mean absolute error                      0.601 
+Root mean squared error                  0.7293
+Relative absolute error                 60.0976 %
+Root relative squared error             65.235  %
+Total Number of Instances             3400     
+

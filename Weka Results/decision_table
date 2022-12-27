@@ -1,0 +1,64 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.rules.DecisionTable -- -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5"
+Relation:     last_train-weka.filters.unsupervised.attribute.Remove-R10
+Instances:    6600
+Attributes:   9
+              height
+              weight
+              age
+              gender
+              bmiValues
+              bmiIndex
+              heartAttackRisk
+              heartRate
+              activityIndex
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+InputMappedClassifier:
+
+Decision Table:
+
+Number of training instances: 6600
+Number of Rules : 233
+Non matches covered by Majority class.
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 37
+	Merit of best subset found:    0.563
+Evaluation (for feature selection): CV (leave one out) 
+Feature set: 3,6,7,8,9
+Attribute mappings:
+
+Model attributes           	    Incoming attributes
+---------------------------	    ----------------
+(numeric) height           	--> 1 (numeric) height
+(numeric) weight           	--> 2 (numeric) weight
+(numeric) age              	--> 3 (numeric) age
+(numeric) gender           	--> 4 (numeric) gender
+(numeric) bmiValues        	--> 5 (numeric) bmiValues
+(numeric) bmiIndex         	--> 6 (numeric) bmiIndex
+(numeric) heartAttackRisk  	--> 7 (numeric) heartAttackRisk
+(numeric) heartRate        	--> 8 (numeric) heartRate
+(numeric) activityIndex    	--> 9 (numeric) activityIndex
+
+
+Time taken to build model: 0.07 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.01 seconds
+
+=== Summary ===
+
+Correlation coefficient                  0.7325
+Mean absolute error                      0.5427
+Root mean squared error                  0.7611
+Relative absolute error                 54.2712 %
+Root relative squared error             68.0783 %
+Total Number of Instances             3400     
+
