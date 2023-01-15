@@ -1,8 +1,8 @@
 === Run information ===
 
-Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.functions.SMOreg -- -C 1.0 -N 0 -I "weka.classifiers.functions.supportVector.RegSMOImproved -T 0.001 -V -P 1.0E-12 -L 0.001 -W 1" -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007"
-Relation:     last_train-weka.filters.unsupervised.attribute.Remove-R10
-Instances:    6600
+Scheme:       weka.classifiers.functions.SMOreg -C 1.0 -N 0 -I "weka.classifiers.functions.supportVector.RegSMOImproved -T 0.001 -V -P 1.0E-12 -L 0.001 -W 1" -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007"
+Relation:     all_dataset-weka.filters.unsupervised.attribute.Remove-R10
+Instances:    10000
 Attributes:   9
               height
               weight
@@ -13,55 +13,36 @@ Attributes:   9
               heartAttackRisk
               heartRate
               activityIndex
-Test mode:    user supplied test set:  size unknown (reading incrementally)
+Test mode:    10-fold cross-validation
 
 === Classifier model (full training set) ===
-
-InputMappedClassifier:
 
 SMOreg
 
 weights (not support vectors):
- -       0.0861 * (normalized) height
- +       0.0562 * (normalized) weight
- +       0.058  * (normalized) age
- +       0.0367 * (normalized) gender
- +       0.0133 * (normalized) bmiValues
- +       0.3132 * (normalized) bmiIndex
- +       0.1176 * (normalized) heartAttackRisk
- -       1.492  * (normalized) heartRate
- +       1.1507
+ -       0.135  * (normalized) height
+ +       0.2011 * (normalized) weight
+ +       0.0512 * (normalized) age
+ +       0.0191 * (normalized) gender
+ -       0.1583 * (normalized) bmiValues
+ +       0.3568 * (normalized) bmiIndex
+ +       0.113  * (normalized) heartAttackRisk
+ -       1.4886 * (normalized) heartRate
+ +       1.1935
 
 
 
-Number of kernel evaluations: 288171568 (21.259% cached)
-Attribute mappings:
+Number of kernel evaluations: 812315750 (12.967% cached)
 
-Model attributes           	    Incoming attributes
----------------------------	    ----------------
-(numeric) height           	--> 1 (numeric) height
-(numeric) weight           	--> 2 (numeric) weight
-(numeric) age              	--> 3 (numeric) age
-(numeric) gender           	--> 4 (numeric) gender
-(numeric) bmiValues        	--> 5 (numeric) bmiValues
-(numeric) bmiIndex         	--> 6 (numeric) bmiIndex
-(numeric) heartAttackRisk  	--> 7 (numeric) heartAttackRisk
-(numeric) heartRate        	--> 8 (numeric) heartRate
-(numeric) activityIndex    	--> 9 (numeric) activityIndex
+Time taken to build model: 18.33 seconds
 
-
-Time taken to build model: 7.65 seconds
-
-=== Evaluation on test set ===
-
-Time taken to test model on supplied test set: 0.01 seconds
-
+=== Cross-validation ===
 === Summary ===
 
-Correlation coefficient                  0.7567
-Mean absolute error                      0.5359
+Correlation coefficient                  0.7566
+Mean absolute error                      0.5385
 Root mean squared error                  0.7972
-Relative absolute error                 53.5912 %
-Root relative squared error             71.3053 %
-Total Number of Instances             3400     
+Relative absolute error                 53.8401 %
+Root relative squared error             71.2992 %
+Total Number of Instances            10000     
 

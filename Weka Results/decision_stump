@@ -1,8 +1,8 @@
 === Run information ===
 
-Scheme:       weka.classifiers.misc.InputMappedClassifier -I -trim -W weka.classifiers.trees.DecisionStump
-Relation:     last_train-weka.filters.unsupervised.attribute.Remove-R10
-Instances:    6600
+Scheme:       weka.classifiers.trees.DecisionStump 
+Relation:     all_dataset-weka.filters.unsupervised.attribute.Remove-R10
+Instances:    10000
 Attributes:   9
               height
               weight
@@ -13,47 +13,28 @@ Attributes:   9
               heartAttackRisk
               heartRate
               activityIndex
-Test mode:    user supplied test set:  size unknown (reading incrementally)
+Test mode:    10-fold cross-validation
 
 === Classifier model (full training set) ===
-
-InputMappedClassifier:
 
 Decision Stump
 
 Classifications
 
-heartRate <= 111.5 : 3.731851851851852
-heartRate > 111.5 : 1.9547540983606557
+heartRate <= 119.5 : 3.5269657258064515
+heartRate > 119.5 : 1.8244363395225465
 heartRate is missing : 2.5
-
-Attribute mappings:
-
-Model attributes           	    Incoming attributes
----------------------------	    ----------------
-(numeric) height           	--> 1 (numeric) height
-(numeric) weight           	--> 2 (numeric) weight
-(numeric) age              	--> 3 (numeric) age
-(numeric) gender           	--> 4 (numeric) gender
-(numeric) bmiValues        	--> 5 (numeric) bmiValues
-(numeric) bmiIndex         	--> 6 (numeric) bmiIndex
-(numeric) heartAttackRisk  	--> 7 (numeric) heartAttackRisk
-(numeric) heartRate        	--> 8 (numeric) heartRate
-(numeric) activityIndex    	--> 9 (numeric) activityIndex
 
 
 Time taken to build model: 0.04 seconds
 
-=== Evaluation on test set ===
-
-Time taken to test model on supplied test set: 0.01 seconds
-
+=== Cross-validation ===
 === Summary ===
 
-Correlation coefficient                  0.7598
-Mean absolute error                      0.5765
-Root mean squared error                  0.728 
-Relative absolute error                 57.6545 %
-Root relative squared error             65.1186 %
-Total Number of Instances             3400     
+Correlation coefficient                  0.7414
+Mean absolute error                      0.617 
+Root mean squared error                  0.7503
+Relative absolute error                 61.6915 %
+Root relative squared error             67.1013 %
+Total Number of Instances            10000     
 
